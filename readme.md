@@ -26,7 +26,7 @@ It is recommended to set up Chat and PUN servers with [Photon](https://www.photo
 ## AcidPi Notes
 
 ### v1.0.17 - v1.19.0
-- Works.
+- Works, however missing some routes like /time/ etc.
 
 ### v1.19.1
 - Works, however requires fixes.
@@ -34,7 +34,7 @@ It is recommended to set up Chat and PUN servers with [Photon](https://www.photo
 ### v1.19.1 Fixes
 
 #### PersistGame(username) 
-- Get username/playerid from request.headers Player-Id.
+- Get username/playerid from `request.headers` `Player-Id`.
 
 #### UserAction2()
 - Add **handle** to the data dictionary or game will freeze in treasure cave.
@@ -46,10 +46,13 @@ It is recommended to set up Chat and PUN servers with [Photon](https://www.photo
 
 #### Other
 
-- Rename **discord_game_sdk.dll** : `<your_install_location>\CardWarsKingdom\Card Wars Kingdom_Data\Plugins\x86_64\` if you dont want data sent to discord.
-- Add folder **recordings** : `%USERPROFILE%\LocalLow\shishkabob\Card Wars Kingdom\` to stop error *folder not found* in logs.
-- Edit **config** : `%USERPROFILE%\LocalLow\shishkabob\Card Wars Kingdom\Unity\local.*\Analytics\` if you dont want to generate files in folder **ArchivedEvents**.
-- New **Config** values :
+- Rename **discord_game_sdk.dll** : `<your_install_location>\CardWarsKingdom\Card Wars Kingdom_Data\Plugins\x86_64\`
+  - Stop discord webhooks.
+- Add folder **recordings** : `%USERPROFILE%\LocalLow\shishkabob\Card Wars Kingdom\` 
+  - Stop error *"folder not found"* in logs.
+- Edit **config** : `%USERPROFILE%\LocalLow\shishkabob\Card Wars Kingdom\Unity\local.*\Analytics\` 
+  - Stop generating files in folder **ArchivedEvents** and possibly sending out...
+  - New **Config** values :
 ```
 {
 	"analytics": {
