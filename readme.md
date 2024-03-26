@@ -23,4 +23,17 @@ To run the server, use one of the following methods:
 
 It is recommended to set up Chat and PUN servers with [Photon](https://www.photonengine.com/) if you want to play PVP and use chat exclusively with users of your server.
 
-## Questions and Support
+## Notes
+
+v1.0.17 - v1.19.0
+  Works
+v1.19.1
+  Required fixes.
+  PersistGame(username) 
+    Get username/playerid from request.headers Player-Id
+  UserAction2()
+    Add handle in the data dict or gems wont deduct.
+    Key has been changed and doesnt match the original game source.
+    Old = "5424493204pemhi3148ifmanseu4iksdf4_4" + clientData["player_id"] + clientData["misc"]
+    New = "5424498w34tiowhtgoae0tu4iksdf4_4" + clientData["player_id"] + "650"
+    Add level1 in the data dict if you have PaidHardCurrency in your save game
