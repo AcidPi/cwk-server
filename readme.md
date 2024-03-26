@@ -1,6 +1,6 @@
 # Card Wars Kingdom Reversed-Engineered Server
 
-This is a reversed-engineered server for Card Wars Kingdom, designed for version 1.0.17
+This is a reversed-engineered server for Card Wars Kingdom, designed for version 1.0.17 works with v1.0.17 - v1.19.0 ( v1.19.1 requires fixes ).
 
 **Disclaimer**: This server is intended for use only by individuals you trust, as it lacks essential security measures in this version.
 
@@ -26,21 +26,51 @@ It is recommended to set up Chat and PUN servers with [Photon](https://www.photo
 ## Notes
 
 ### v1.0.17 - v1.19.0
-- Works
+- Works.
 
 ### v1.19.1
-- Works however requires fixes
+- Works, however requires fixes.
 
-### Fixes
+### v1.19.1 Fixes
 
 #### PersistGame(username) 
-- Get username/playerid from request.headers Player-Id
+- Get username/playerid from request.headers Player-Id.
 
 #### UserAction2()
-- Add handle in the data dict or gems wont deduct.
-- Key has been changed and doesnt match the original game source.
-- `Old = "5424493204pemhi3148ifmanseu4iksdf4_4" + clientData["player_id"] + clientData["misc"]`
-- `New = "5424498w34tiowhtgoae0tu4iksdf4_4" + clientData["player_id"] + "650"`
-- Add level1 in the data dict if you have PaidHardCurrency in your save game
+- Add **handle** in the data dictionary or game will freeze in treasure cave.
+- Add sha256 Hash to handle or gems wont deduct from your total.
+- Key to generate hash has been changed and no longer matches the original game source.
+- `OldKey = "5424493204pemhi3148ifmanseu4iksdf4_4" + clientData["player_id"] + clientData["misc"]`
+- `NewKey = "5424498w34tiowhtgoae0tu4iksdf4_4" + clientData["player_id"] + "650"`
+- *All versions:* add **level1** to the data dictionary if you have PaidHardCurrency in your save game.
 
+#### Other
 
+- Rename **discord_game_sdk.dll** `"<your_install_location>\CardWarsKingdom\Card Wars Kingdom_Data\Plugins\x86_64\discord_game_sdk.dll"` if you dont want data sent to discord
+- Add folder **recordings** to `%USERPROFILE%\LocalLow\shishkabob\Card Wars Kingdom\` to stop error *folder not found* in logs.
+- edit `%USERPROFILE%\LocalLow\shishkabob\Card Wars Kingdom\Unity\local.*\Analytics\config` if you dont want to generate files in ArchivedEvents or possibly send?
+```
+{
+	"analytics": {
+		"enabled": false
+	},
+	"connect": {
+		"limit_user_tracking": true,
+		"player_opted_out": true,
+		"enabled": false
+	},
+	"performance": {
+		"enabled": false
+	},
+	"dynamic": {
+		"coreBusinessMetrics": {
+			"enabled": false,
+			"timeToWaitForUserInfoS": 86400
+		},
+		"analytics": {
+			"shouldCollectAutomation": false,
+			"timeToWaitForUserInfoS": 86400
+		}
+	}
+}
+```
