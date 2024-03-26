@@ -26,14 +26,25 @@ It is recommended to set up Chat and PUN servers with [Photon](https://www.photo
 ## Notes
 
 v1.0.17 - v1.19.0
-  Works
+
+Works
+
 v1.19.1
-  Required fixes.
-  PersistGame(username) 
-    Get username/playerid from request.headers Player-Id
-  UserAction2()
-    Add handle in the data dict or gems wont deduct.
-    Key has been changed and doesnt match the original game source.
-    Old = "5424493204pemhi3148ifmanseu4iksdf4_4" + clientData["player_id"] + clientData["misc"]
-    New = "5424498w34tiowhtgoae0tu4iksdf4_4" + clientData["player_id"] + "650"
-    Add level1 in the data dict if you have PaidHardCurrency in your save game
+
+Required fixes.
+
+PersistGame(username) 
+
+Get username/playerid from request.headers Player-Id
+
+UserAction2()
+
+Add handle in the data dict or gems wont deduct.
+
+Key has been changed and doesnt match the original game source.
+
+Old = "5424493204pemhi3148ifmanseu4iksdf4_4" + clientData["player_id"] + clientData["misc"]
+
+New = "5424498w34tiowhtgoae0tu4iksdf4_4" + clientData["player_id"] + "650"
+
+Add level1 in the data dict if you have PaidHardCurrency in your save game
