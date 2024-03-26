@@ -46,9 +46,9 @@ It is recommended to set up Chat and PUN servers with [Photon](https://www.photo
 
 #### Other
 
-- Rename **discord_game_sdk.dll** `"<your_install_location>\CardWarsKingdom\Card Wars Kingdom_Data\Plugins\x86_64\discord_game_sdk.dll"` if you dont want data sent to discord
+- Rename **discord_game_sdk.dll** `<your_install_location>\CardWarsKingdom\Card Wars Kingdom_Data\Plugins\x86_64\` if you dont want data sent to discord.
 - Add folder **recordings** to `%USERPROFILE%\LocalLow\shishkabob\Card Wars Kingdom\` to stop error *folder not found* in logs.
-- edit `%USERPROFILE%\LocalLow\shishkabob\Card Wars Kingdom\Unity\local.*\Analytics\config` if you dont want to generate files in ArchivedEvents or possibly send?
+- Edit file **config** `%USERPROFILE%\LocalLow\shishkabob\Card Wars Kingdom\Unity\local.*\Analytics\` if you dont want to generate files in ArchivedEvents or possibly send?
 ```
 {
 	"analytics": {
