@@ -78,3 +78,4 @@ It is recommended to set up Chat and PUN servers with [Photon](https://www.photo
 	}
 }
 ```
+- Moving Devices : If you know how this is possible "**android to pc**", "**pc to pc**", "**pc to android** < *requires root*" however in the latest build of cwk-server **X-Nick-Description** is being stored and checked, if you plan on changing devices and using shikabobs server new device will need to have same name, a security measure however KFF build handled this security issue in a different way.
