@@ -52,7 +52,7 @@ It is recommended to set up Chat and PUN servers with [Photon](https://www.photo
   - Stop error *"folder not found"* in logs.
 - Edit **config** : `%USERPROFILE%\LocalLow\shishkabob\Card Wars Kingdom\Unity\local.*\Analytics\` 
   - Stop generating files in folder **ArchivedEvents** and possibly sending out...
-  - New **Config** values :
+  - New **config** values :
 ```
 {
 	"analytics": {
@@ -78,4 +78,4 @@ It is recommended to set up Chat and PUN servers with [Photon](https://www.photo
 	}
 }
 ```
-- Moving Devices : If you know how this is possible "**android to pc**", "**pc to pc**" and "**pc to android < requires root**" however in the latest build of cwk-server **X-Nick-Description** is being stored and checked, if you plan on changing devices and using shikabobs server new device will need to have same name as the old device.
+- Moving Devices : If you know how this is possible "**android to pc**", "**pc to pc**", "**pc to android** *< requires root* and "**android to android**" *< requires root* however in the latest build of cwk-server **X-Nick-Description** is being stored and checked, if you plan on changing devices and using shishkabob's server new device will need to have same name as the old device.
